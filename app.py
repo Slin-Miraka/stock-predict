@@ -4,7 +4,7 @@ import streamlit as st
 from LinearRegression import  LinearRegression
 from MovingAverage import MovingAverage
 from KNearestNeighbours import KNearestNeighbours
-from AutoARIMA import AutoARIMA
+#from AutoARIMA import AutoARIMA
 from LongShortTM import LongShortTM
 import cartoon_html
 
@@ -75,15 +75,17 @@ st.line_chart(df[type])
 
 st.subheader('5.选择机器学习算法')
 genre = st.selectbox("请选择时间序列预测算法",
-     ('移动平均算法', '线性回归算法', '最近邻算法', 'AutoARIMA算法', 'LSTM算法'))
+     ('移动平均算法', '线性回归算法', '最近邻算法'
+      #, 'AutoARIMA算法'
+      , 'LSTM算法'))
 if genre == '移动平均算法':
     MovingAverage(df, type, split)
 elif genre == '线性回归算法':
      LinearRegression(df, type, split)
 elif genre == '最近邻算法':
      KNearestNeighbours(df, type, split)
-elif genre == 'AutoARIMA算法':
-    AutoARIMA(df, type, split)
+#elif genre == 'AutoARIMA算法':
+    #AutoARIMA(df, type, split)
 elif genre == 'LSTM算法':
     LongShortTM(df, type, split)
 
