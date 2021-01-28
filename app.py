@@ -7,6 +7,7 @@ from KNearestNeighbours import KNearestNeighbours
 #from AutoARIMA import AutoARIMA
 from LongShortTM import LongShortTM
 import cartoon_html
+import matplotlib.pyplot as plt
 
 #------------------------侧边栏------------------------
 st.sidebar.image('BigDataCenter.jpg',width=300)
